@@ -1,0 +1,69 @@
+body {
+    font-family: 'Source Sans Pro';
+    
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url("fonts/SourceSansPro-Light.ttf"),
+    url("fonts/SourceSansPro-Bold.ttf"),
+       url("fonts/SourceSansPro-Regular.ttf"),
+       url("fonts/SourceSansPro-Black.ttf"),
+       url("fonts/SourceSansPro-ExtraLight.ttf")
+       url("fonts/SourceSansPro-Semibold.ttf")
+       ;
+}
+
+.header {
+height: 100px;
+background-color: #ffffff;
+}
+
+.t-menu-cont {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: auto 10px auto 10px;
+    display: grid;
+    grid-template-columns: 72px auto 170px;
+    grid-template-areas: "logo l-topmenu r-topmenu";
+
+}
+.logo {grid-area: logo; background: center  no-repeat url("images/logo.svg");}
+.l-topmenu {grid-area: l-topmenu; display: flex; align-items: center; padding: 0 0 0 20px;}
+.r-topmenu {grid-area: r-topmenu; display: flex; place-content: end; align-items: center; padding: 0 10px 0 0;}
+
+.topmenu-item {
+    color: #c41610;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px;
+    text-decoration: none;
+}
+/* 
+.topmenu-item:hover {
+    color: #ffffff;
+    background-color: #c41610;
+} */
+
+.top-social {
+    padding: 8px;
+}
+
+.hero {
+    background: center / cover  no-repeat url("images/hero.jpg");
+    height: 800px;
+    background-color:#07121d;
+}
+
+
+
+
+.main {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-rows: 100px 800px 532px 500px 458px 560px 451px 100px;
+    margin: 0 10px
+}
+
