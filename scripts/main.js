@@ -1,5 +1,5 @@
 "use strict";
-console.log('Running main.js');
+console.log('Running my main.js');
 
 function openVideo() {
     document.getElementById("how-video").classList.remove("static-video");

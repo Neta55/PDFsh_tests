@@ -129,10 +129,6 @@ button:hover {
     color: #e6e6e6;
 }
 
-button:active {
-    height: 33px;
-    width: 175px;
-}
 
 input {
     height:33px;
