@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="header">
-            <div class="t-menu-cont">
+            <div class="t-menu-cont" id="top">
                 <div class="logo"></div>
                 <div class="l-topmenu">
                     <a class="topmenu-item" href="" target="">Home</a>
@@ -93,10 +93,11 @@
             <div class="video-cont">
                 <div class="videotext">
                     <h2 class="white left">Here’s How It Works</h2><br><br>
-                    <p class="white left">To learn everything PDFSF can do for you, take a look at our awesome features
-                        and how it works on all devices</p>
+                    <p class="white left">To learn everything PDFSF can do<br>for you, take a look at our awesome<br>
+                        features and how it works on all<br>devices.</p>
                 </div>
-                <div class="videoplace"><input type="checkbox" /></div>
+                <div class="videoplace "><button class="static-video" id="how-video" onclick="openVideo()"></button>
+                </div>
             </div>
 
         </div>
@@ -112,7 +113,63 @@
             <p class="awtext">PDFSF has been recognized by the European SharePoint Conference Community as “Most
                 Innovative Cloud Solution” and “Best Intranet/Extranet Solution” for four years in a row.</p>
         </div>
+
+
+        <div class="webinar-area">
+            <div class="webinar-cont">
+                <div class="webinar-pic"></div>
+                <div class="webinar-text">
+                    <h2 class="white semibold">Join around<br>200 professionals<br>every month for<br>our PDFSF Cloud
+                        webinar</h2>
+                    <button class="btn-center" name="events">view Events</button>
+                </div>
+            </div>
+        </div>
+        <div class="sup-cont">
+            <h2 class="suptittle">Supported By All These Browsers</h2>
+            <div class="supbr">
+                <div class="chrome"></div>
+                <div class="iexpl"></div>
+                <div class="firefox"></div>
+                <div class="safari"></div>
+                <div class="edge"></div>
+                <div class="apple"></div>
+                <div class="android"></div>
+            </div>
+            <div class="supbtn">
+                <button class="center" name="specs">more specs</button>
+            </div>
+
+        </div>
     </main>
+
+
+
+
+
+
+    <footer>
+
+        <div class="footer-cont">
+            <div class="logo-btm"></div>
+            <div class="menu-btm">
+                <a class="menu-btm-item right-border" href="" target="">Contacts</a>
+                <a class="menu-btm-item right-border" href="" target="">Events</a>
+                <a class="menu-btm-item right-border" href="" target="">About Us</a>
+                <a class="menu-btm-item right-border" href="" target="">Privacy Statement</a>
+                <a class="menu-btm-item" href="" target="">BBB Accredited</a>
+            </div>
+            <a href="#top" class="totop"></a>
+            <div class="copyright">@ 2010-2019 PDFSF Cloud. All rights reserved</div>
+        </div>
+
+    </footer>
+
+    <div class="chat-form">
+        <div class=""></div>
+    </div>
+    <div class="red-btn">Online</div>
+    <div class="chat-image"></div>
 </body>
 
 </html>

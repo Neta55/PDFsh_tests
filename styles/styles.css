@@ -76,15 +76,16 @@ background-color: #ffffff;
 .tittle {grid-area: tittle; margin: 170px 0 0px 10px;  align-self: center;}
 .introduction {grid-area: introduction; color: #ffffff; font-size: 36px; text-shadow: 1px 1px 2px #07121d; font-weight: 400; margin: 0 0 0 10px;}
 .trial {
+    grid-area: trial; 
+    height: 81px;
     background-color: #c41610;
     margin: 0 10px 20px 0;
     padding: 10px;
-    grid-gap: 10px;
-    grid-area: trial; 
+    column-gap: 10px;
     display: grid;
     align-self: end;
     align-items: center;
-    grid-template-rows: auto auto;
+    grid-template-rows: 40px 43px;
     grid-template-columns: 378px 182px;
     grid-template-areas: 
     "trial-bigtext trial-smalltext"
@@ -109,8 +110,8 @@ button {
     color: #ffffff;
     font-family: 'Source Sans Pro';
     font-size: 18px;
-    height: 30px;
-    width: 177px;
+    height: 35px;
+    width: 180px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -124,17 +125,18 @@ button {
 
 }
 
-/* .button:hover {
+button:hover {
+    color: #e6e6e6;
+}
 
-} */
-
-/* .button:active {
-
-} */
+button:active {
+    height: 33px;
+    width: 175px;
+}
 
 input {
-    height:30px;
-    width: 100%;
+    height:33px;
+    width: 99%;
     background-color: #ffffff;
     border-radius: 3px;
     font-family: 'Source Sans Pro';
@@ -179,6 +181,10 @@ h2 {
 text-align: left;
 }
 
+.semibold {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 h3 {
     font-size: 24px;
     line-height: 24px;
@@ -254,25 +260,28 @@ p {
 .videotext { grid-area: videotext; padding: 50px 0 0 0;}
 .videoplace { grid-area: videoplace; }
 
-input[type="checkbox"] {
-    width: 0;
-    height: 0;
-    margin: 0;
-    border: 0 none;
-    padding: 0;
-}
-input[type="checkbox"]:before {
+.static-video {
+    background: center / contain no-repeat url('images/CombinedFinal_NotLoaded.png');
     position: relative;
-    top: -30px;
-    left: -140px;
-    content: url('images/CombinedFinal_NotLoaded.png');
-    display: block;
+    top: -25px;
+    left: -190px;
     width: 960px;
     height: 540px;
-    overflow: hidden;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
 }
-input[type="checkbox"]:checked:before {
-    content: url('images/combinedfinal_halfr4.gif');
+.play-video {
+    background: center / contain no-repeat url('images/combinedfinal_halfr4.gif');
+    position: relative;
+    top: -25px;
+    left: -190px;
+    width: 960px;
+    height: 540px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
 }
 
 .award-cont {
@@ -293,31 +302,65 @@ input[type="checkbox"]:checked:before {
 .awtext { grid-area: awtext; align-self: top;}
 
 .aw2013 {
-    background: center / contain no-repeat url(images/sharepoint-award-winner-badge.png);
+    background: center / contain no-repeat url('images/sharepoint-award-winner-badge.png');
     width: 128px;
     height: 126px;
 }
 
 .aw2014 {
-    background: center / contain no-repeat url(images/espc-2014-best-sharepoint-app-awards-winner-badge200.png);
+    background: center / contain no-repeat url('images/espc-2014-best-sharepoint-app-awards-winner-badge200.png');
     width: 160px;
     height: 126px;
 }
 
 .aw2015 {
-    background: center / contain no-repeat url(images/european-sharepoint-community-awards-finalist-pdf-share-forms-best-offic.jpg);
+    background: center / contain no-repeat url('images/european-sharepoint-community-awards-finalist-pdf-share-forms-best-offic.jpg');
     width: 260px;
-    height: 126px;;
+    height: 126px;
 }
 
 .aw2016 {
-    background: center / contain no-repeat url(images/most-innovative-cloud-solution-finalist.jpg);
+    background: center / contain no-repeat url('images/most-innovative-cloud-solution-finalist.jpg');
     width: 153px;
     height: 143px;
 }
 
+.webinar-area {
+    background-color: #333333;
+    height: 560px;
+}
 
+.webinar-cont {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-areas: 
+    "webinar-pic webinar-text";
+}  
+.webinar-pic { 
+    grid-area: webinar-pic; 
+    background: center / contain no-repeat url('images/webinar.svg'); 
+    width: 573px;
+    height: 472px;
+    align-self: center;}
 
+.webinar-text { 
+    grid-area: webinar-text; 
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+justify-content: center;}
+
+.btn-center {
+margin: 50px auto 0 auto;
+}
+
+.center {
+    margin: 0 auto 0 auto;
+    }
 
 .main {
     display: grid;
@@ -326,4 +369,163 @@ input[type="checkbox"]:checked:before {
     margin: 0 10px
 }
 
-/* center no-repeat url('images/CombinedFinal_NotLoaded.png'); */
+.sup-cont {
+    max-width: 1200px;
+    height: 451px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template-rows: 137px 165px auto;
+    grid-template-areas: 
+    "suptittle"
+    "supbr"
+    "supbtn";
+}
+
+.suptittle { grid-area: suptittle; align-self: end;}
+.supbr { grid-area: supbr; align-items: center; display: flex; justify-content: space-between; padding: 0 188px 0 188px ;}
+.supbtn { grid-area: supbtn; display: flex; justify-content: center;}
+
+.chrome {
+    background: center / contain no-repeat url('images/chrome_logo.png');
+    width: 47px;
+    height: 47px; 
+}
+ .iexpl {
+    background: center / contain no-repeat url('images/ie_logo.png');
+    width: 47px;
+    height: 46px; 
+    }
+ .firefox {
+    background: center / contain no-repeat url('images/firefox_logo.png');
+    width: 50px;
+    height: 46px;   
+     }
+ .safari {
+    background: center / contain no-repeat url('images/safari_logo.png');
+    width: 49px;
+    height: 58px;  
+    }
+ .edge {
+    background: center / contain no-repeat url('images/edge_logo.png');
+    width: 41px;
+    height: 44px;    
+    }
+ .apple {
+    background: center / contain no-repeat url('images/apple_logo.png');
+    width: 38px;
+    height: 46px;           
+                }
+ .android {
+    background: center / contain no-repeat url('images/android_logo.png');
+    width: 41px;
+    height: 48px;   
+     }
+
+
+
+
+footer {
+    background-color: #cccccc;
+    height: 100px;
+}
+
+.footer-cont {
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template-columns: 52px auto 30px 22px;
+    grid-template-areas: 
+    "logo-btm menu-btm . totop"
+    "logo-btm copyright . .";
+}
+
+.logo-btm { 
+    grid-area: logo-btm; 
+    align-items: center; 
+    background: center / contain no-repeat url('images/logo.svg');
+    width: 52px;
+    height: 52px;
+    margin-top: 24px;
+}
+.menu-btm { grid-area: menu-btm; display: flex; justify-content: center;}
+.copyright { grid-area: copyright; display: flex; margin: 0 auto; font-size: 12px;}
+.totop { 
+    grid-area: totop; 
+    display: flex;
+    justify-content: end; 
+    background: center / contain no-repeat url('images/to-top.svg');
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: -23px;
+}
+
+.menu-btm-item {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    height: 20px;
+    text-align: center;
+    padding: 0 16px 0 16px;
+    margin-top: 32px;
+}
+
+.menu-btm-item:hover {
+    color: #333333;
+}
+
+
+.right-border {
+border-right: #333333 solid 1px;
+}
+
+.chat-form {
+    width: 350px;
+    height: 450px;
+    background-color: #ffffff;
+    display: grid;
+
+}
+.red-btn {
+    background-color: #c41610;
+    color: #ffffff;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    height: 35px;
+    width: 260px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    padding: 0px;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+
+
+}
+
+.chat-image {
+    background: center / contain no-repeat url('images/chat.svg');
+    width: 177px;
+    height: 93px;
+    position: fixed;
+    bottom: 40px;
+    right: 41px;
+   
+}
+
+.chat-image:hover {
+    display: none;
+    /* transition-duration: 2s; */
+}
