@@ -44,7 +44,8 @@
                     <div class="trial-bigtext">Start Your 14 Days Trial Free</div>
                     <div class="trial-smalltext">No credit card needed<br>No span emails</div>
                     <div class="trial-input">
-                        <input type="email" id="email-trial" name="email-trial">
+                        <input type="email" class="input-trial" id="email-trial" name="email-trial"
+                            placeholder="Enter Your e-mail">
                     </div>
                     <div class="trial-btn">
                         <button>request trial</button>
@@ -165,11 +166,47 @@
 
     </footer>
 
-    <div class="chat-form">
-        <div class=""></div>
-    </div>
-    <div class="red-btn">Online</div>
+
+    <button class="red-btn" onclick="openForm()">Offline</button>
     <div class="chat-image"></div>
+    <div class="pop-up-form" id="pop-up-form">
+        <div class="chat-form">
+            <div class="form-header">
+                <div class="online">Online</div>
+                <div class="close">
+                    <button class="close-btn" id="close-btn" onclick="closeForm()"></button>
+                </div>
+                <div class="tip">Please fill out the form below to start chatting with the next available agent.</div>
+            </div>
+            <form action="">
+                <div class="form-area">
+                    <div class="center-ch-items">
+                        <label for="ch-name" class="ch-label">Name</label>
+                        <input type="text" id="ch-name" name="ch-name" placeholder="* Enter your name.."
+                            class="ch-input">
+                    </div>
+                    <div class="center-ch-items">
+                        <label for="ch-email" class="ch-label">E-mail</label>
+                        <input type="email" id="ch-email" name="ch-email" placeholder="* Enter your e-mail.."
+                            class="ch-input">
+                    </div>
+                    <div class="center-ch-items">
+                        <label for="ch-message" class="ch-label">Message</label>
+                        <textarea type="text" id="ch-message" name="ch-message" placeholder="* Type your message.."
+                            class="ch-input ch-area"></textarea>
+                    </div>
+                    <div class="center-ch-items">
+                        <button type="submit" id="ch-submit" name="ch-submit" class="form-btn">start
+                            chat</button>
+
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

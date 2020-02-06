@@ -126,23 +126,25 @@ button {
 }
 
 button:hover {
-    color: #e6e6e6;
+    opacity: 0.9;
 }
 
 
-input {
+.input-trial {
     height:33px;
-    width: 99%;
+    width: 100%;
     background-color: #ffffff;
     border-radius: 3px;
     font-family: 'Source Sans Pro';
     font-size: 20px;
     text-transform: uppercase;
+    text-indent: 10px;
+    font-weight: 100;
     color: #b3b3b3;
     box-shadow: none;
     border: 0px;
     outline: none;
-    padding-left: 5px;
+    padding-left: 0;
 }
 .trial-bigtext {
     color: #ffffff;
@@ -457,6 +459,7 @@ footer {
     height: 22px;
     position: relative;
     top: -23px;
+    z-index: 9;
 }
 
 .menu-btm-item {
@@ -479,20 +482,14 @@ footer {
 border-right: #333333 solid 1px;
 }
 
-.chat-form {
-    width: 350px;
-    height: 450px;
-    background-color: #ffffff;
-    display: grid;
 
-}
 .red-btn {
     background-color: #c41610;
     color: #ffffff;
     font-family: 'Source Sans Pro';
     font-size: 16px;
     height: 35px;
-    width: 260px;
+    width: 180px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -502,13 +499,9 @@ border-right: #333333 solid 1px;
     border: 0px;
     outline: none;
     cursor: pointer;
-    padding: 0px;
-    vertical-align: middle;
     position: fixed;
     bottom: 0;
     right: 10px;
-
-
 }
 
 .chat-image {
@@ -516,12 +509,148 @@ border-right: #333333 solid 1px;
     width: 177px;
     height: 93px;
     position: fixed;
-    bottom: 40px;
-    right: 41px;
+    bottom: 35px;
+    right: 12px;
+    transition: 0.5s;
    
 }
 
 .chat-image:hover {
-    display: none;
-    /* transition-duration: 2s; */
+    opacity: 0;
 }
+.pop-up-form {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}
+
+.chat-form {
+    width: 350px;
+    height: 420px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: solid 1px #c41610;
+    display: grid;
+grid-template-rows: 120px 300px;
+grid-template-areas: 
+"form-header"
+"form-area";
+}
+
+.form-header {
+    grid-area: form-header; 
+    display: grid;
+    grid-template-columns: 302px 48px;
+grid-template-rows: 70px 50px;
+grid-template-areas: 
+"online close"
+"tip tip";
+}
+
+.online {
+    height: auto;
+    width: auto;
+    grid-area: online; 
+    background-color: #c41610; 
+    color: #ffffff; 
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.close {
+    height: auto;
+    width: auto;
+    grid-area: close; 
+    background-color: #c41610; 
+    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    background: center / contain no-repeat url('images/close.svg');
+    width: 12px;
+    height: 12px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+}
+.tip {
+    height: auto;
+    width: auto;
+    grid-area: tip; 
+    background-color: #c41610; 
+    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    padding:  0 30px 10px 30px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.form-area {
+    grid-area: form-area; 
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+   padding-left: 18px;
+    justify-content: space-around;
+}
+.ch-label {
+    color: #c41610;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.ch-input {
+    height:30px;
+    width: 310px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: #e6e6e6 solid 1px;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    text-indent: 10px;
+    color: #e6e6e6;
+    box-shadow: none;
+    outline: none;
+    padding-left: 0;
+}
+
+.ch-area {
+    height: 50px;
+}
+
+.form-btn {
+    background-color: #c41610;
+    color: #ffffff;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    height: 35px;
+    width: 314px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+}
+/* .center-ch-items {
+    margin-left: auto;
+    margin-right: auto;
+} */

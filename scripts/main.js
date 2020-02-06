@@ -6,3 +6,10 @@ function openVideo() {
     document.getElementById("how-video").classList.add("play-video");
 }
 
+function openForm() {
+    document.getElementById("pop-up-form").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("pop-up-form").style.display = "none";
+}
