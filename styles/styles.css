@@ -1,11 +1,11 @@
 body {
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', sans-serif;
     color: #1a1a1a;
     
 }
 
 
-@font-face {
+/* @font-face {
     font-family: 'Source Sans Pro';
     src: url("fonts/SourceSansPro-Light.ttf"),
     url("fonts/SourceSansPro-Bold.ttf"),
@@ -14,7 +14,7 @@ body {
        url("fonts/SourceSansPro-ExtraLight.ttf")
        url("fonts/SourceSansPro-Semibold.ttf")
        ;
-}
+} */
 
 .header {
 height: 100px;
@@ -95,8 +95,8 @@ background-color: #ffffff;
 .trial-btn {grid-area: trial-btn;}
 
 h1 {
-
-    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
     font-size: 63px;
     line-height: 60px;
     font-stretch: 20%;
